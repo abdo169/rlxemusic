@@ -20,7 +20,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "8";
+const prefix = "$";
 /////////////////////////
 ////////////////////////
 
@@ -313,10 +313,10 @@ function play(guild, song) {
 
 
 client.on('message', message => {
-    if (message.content === '8help') {
+    if (message.content === '$help') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
-        .setDescription('**برفكس البوت (8)**')
+        .setDescription('**برفكس البوت ($)**')
         .addField('play', 'لتشغيل اغنية')
         .addField('join', 'دخول رومك الصوتي')
         .addField('disconnect', 'الخروج من رومك الصوتي')
@@ -329,8 +329,8 @@ client.on('message', message => {
     }
 });
 
-const adminprefix = "8";
-const devs = ['487313531071496195','484098680954290219'];
+const adminprefix = "$";
+const devs = ['340001698972041226'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
@@ -361,7 +361,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : Diamond Codes ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Chicago | Music 8 `)//حقوق دايموند كودز
+client.user.setGame(`Chicago, Server `)//حقوق دايموند كودز
 client.user.setStatus("online")
 });
 
